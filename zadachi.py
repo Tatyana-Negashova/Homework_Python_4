@@ -9,14 +9,25 @@
 # Задача 2.  Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
 
 
-number = int(input("Введите число: "))
-i = 2 #первое простое число
-list = []
-while i <= number:
-    if number % i == 0:
-        list.append(i)
-        number //= i
-        i = 2
-    else:
-        i += 1
-print(f"Простые множители Вашего числа: {list}")
+# number = int(input("Введите число: "))
+# i = 2 #первое простое число
+# list = []
+# while i <= number:
+#     if number % i == 0:
+#         list.append(i)
+#         number //= i
+#         i = 2
+#     else:
+#         i += 1
+# print(f"Простые множители Вашего числа: {list}")
+
+# Задача 3. 3 Задайте последовательность чисел. Напишите программу, которая выведет 
+# список неповторяющихся элементов исходной последовательности.
+
+import random
+list = [random.randint(0,15) for i in range (25)]
+print(list)
+new_list =[]
+[new_list.append(i) for i in list if i not in new_list ]
+print(new_list)
+
